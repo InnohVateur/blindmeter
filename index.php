@@ -10,9 +10,8 @@
     </head>
     <body>
         <?php
-                //echo "<form method='post' action='index.php'><label>Mot de passe : </label><input type='password' name='passw'><input type='submit' value='Accéder au site'></form>";
-                echo '<a href="blindtest.php">Blind tests</a>';
-                echo '<a href="fthesong.php">Termine les paroles</a>';
+                echo '<a href="blindtest.php">Blind test</a>';
+                echo '<a href="fthesong.php">Find the lyrics</a>';
         ?>
     </body>
 </html>
