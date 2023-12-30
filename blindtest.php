@@ -1,7 +1,7 @@
 <?php
     if(session_status()==PHP_SESSION_NONE)session_start(); #Starts the session if not started
 
-    $env = parse_ini_file(".env"); #Converts the .env config file to an array
+    $env = parse_ini_file('.env'); #Converts the .env config file to an array
     $access_mdp = $env['ACCESS_PASSWD']; #THE MDP REQUIRED TO ACCESS THE APP
 
     $previous_length = $env['PREVIOUS_LENGTH']; #The number of previous songs that are tracked
@@ -58,7 +58,7 @@
     function getRandomSong(){ #Gets a random song that has not been chosen in the last $previous_length songs
         global $dbms_host, $dbms_user, $dbms_mdp, $db_name, $table_name, $previous_length; #Gets the value of the global variables
 
-        $conn = new mysqli($dbms_host, $dbms_user, $dbms_mdp); #Gets the connection to the mysql server
+        $conn = new mysqli($dbms_host, $dbms_user, $dbms_mdp); #Connects to the MySQL server
         if($conn->connect_error){ #If there is a connection error
             die("Connection failed : ". $conn->connect_error); #Then print the error on the page
         }

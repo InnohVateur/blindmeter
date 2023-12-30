@@ -2,7 +2,7 @@
     <section class="headerP">
         <form action="" method="post" class="reset">
             <input type="hidden" name="reset" value="true">
-            <input type="submit" value="Réinitialiser">
+            <input type="submit" value="Reset">
         </form>
         <a href="addbtmusic.php" target="_blank">
             <section>
@@ -11,7 +11,7 @@
         </a>
     </section>
     <section class="teamS">
-        <p>Équipe Jaune : <?= $_SESSION['yP']." point".($_SESSION['yP']>1||$_SESSION['yP']==0?"s":"")?></p>
+        <p>Yellow Team : <?= $_SESSION['yP']." point".($_SESSION['yP']>1||$_SESSION['yP']==0?"s":"")?></p>
         <section>
             <section>
                 <form action="" method="post" class="yF">
@@ -36,7 +36,7 @@
         </section>
     </section>
     <section class="teamS">
-        <p>Équipe Rouge : <?= $_SESSION['rP']." point".($_SESSION['rP']>1||$_SESSION['rP']==0?"s":"")?></p>
+        <p>Red Team : <?= $_SESSION['rP']." point".($_SESSION['rP']>1||$_SESSION['rP']==0?"s":"")?></p>
         <section>
             <section>
                 <form action="" method="post" class="rF">
@@ -61,7 +61,7 @@
         </section>
     </section>
     <section class="teamS">
-        <p>Équipe Verte : <?= $_SESSION['gP']." point".($_SESSION['gP']>1||$_SESSION['gP']==0?"s":"")?></p>
+        <p>Green Team : <?= $_SESSION['gP']." point".($_SESSION['gP']>1||$_SESSION['gP']==0?"s":"")?></p>
         <section>
             <section>
                 <form action="" method="post" class="gF">
@@ -86,7 +86,7 @@
         </section>
     </section>
     <section class="teamS">
-        <p>Équipe Bleue : <?= $_SESSION['bP']." point".($_SESSION['bP']>1||$_SESSION['bP']==0?"s":"")?></p>
+        <p>Blue Team : <?= $_SESSION['bP']." point".($_SESSION['bP']>1||$_SESSION['bP']==0?"s":"")?></p>
         <section>
             <section>
                 <form action="" method="post" class="bF">
