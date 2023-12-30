@@ -15,7 +15,7 @@
    artists TEXT NOT NULL,
    PRIMARY KEY(deez_id));
    ```
-4. Download the example.env file and rename to .env. Then, add it, with the source code you downloaded at step 2, to the www file of wamp (located in the wamp directory, usually located in C:).
+4. Download the .env file from the misc branch. Then, add it, with the source code you downloaded at step 2, to the www file of wamp (located in the wamp directory, usually located in C:).
 
 ## How to use
 Go to [localhost](localhost) after you ran wampmanager. then click on blindtest and type the password specified in the .env file (the default one is "root"), and enjoy !<br/>

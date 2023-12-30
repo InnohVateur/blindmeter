@@ -20,7 +20,7 @@
             if(isset($song)){
                 echo "<p class='songid'>".$song->id."</p>";
                 echo "<img src='".$song->album->cover_xl."'>";
-                echo "<figure>\n\t<figcaption>" . $song->title_short . ",<br />" . join(", ", $contributors) . "</figcation>\n\t";
+                echo "<figure>\n\t<figcaption>" . $song->title_short . ", " . join(", ", $contributors) . "</figcation>\n\t";
                 echo "<audio controls src='" . $song->preview . "'>\n\t\t<a href='" . $song->preview . "'>Download</a>\n\t</audio>";
                 echo "\n</figure>\n";
                 echo "<section class='verifbuttons'>";
