@@ -1,0 +1,168 @@
+*{
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: arial;
+    user-select: none;
+}
+.points{
+    display: flex;
+    flex-grow: initial;
+    width: 300px;
+    background: linear-gradient(45deg, #F05925, #94288F 70%);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 100vh;
+}
+.points::-webkit-scrollbar{
+    display: none;
+}
+.points input[type="submit"]{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6.25px;
+    color: white;
+    font-size: 15pt;
+}
+.headerP{
+    display: flex;
+}
+.reset input[type="submit"]{
+    background-color: rgb(60, 60, 60);
+    width: 150px;
+    height: 50px;
+    margin-right: 10px;
+    font-size: 15pt;
+}
+.headerP a{
+    text-decoration: none;
+}
+.headerP a section{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6.25px;
+    background-color: forestgreen;
+}
+.headerP a section p{
+    color: white;
+    font-size: 20pt;
+}
+.yF input[type="submit"]{
+    background-color: darkgoldenrod;
+}
+.rF input[type="submit"]{
+    background-color: darkred;
+}
+.gF input[type="submit"]{
+    background-color: darkgreen;
+}
+.bF input[type="submit"]{
+    background-color: navy;
+}
+.teamS{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.teamS section{
+    display: flex;
+    flex-direction: column;
+}
+.teamS section section{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.teamS p{
+    padding: 0px 10px;
+    font-size: 15pt;
+}
+.teamS input[type="submit"]{
+    margin-right: 10px;
+}
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background: conic-gradient(from 90deg at 100% 100%, #94288F, #F05925);
+}
+.startbtn{
+    width: auto;
+    height: 85vh;
+    cursor: pointer;
+    visibility: hidden;
+    transition: transform 0.25s ease-in;
+    margin: 0;
+    padding: 0;
+}
+.startbtn:hover:not([disabled="true"]){
+    transform: scale(95%);
+}
+.startbtn[disabled="true"]{
+    transition: none;
+    cursor: auto;
+}
+.answer, .answer input[type="image"], .answer figcaption{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.answier input[type="image"]{
+    aspect-ratio: 1 / 1;
+}
+.answer figcaption{
+    font-style: italic;
+}
+.counter{
+    font-size: 0pt;
+    margin: 0;
+    visibility: hidden;
+}
+@media screen and (max-height:650px){
+    .headerP{
+        max-height: 0;
+        max-width: 0;
+        visibility: hidden;
+    }
+    .teamS{
+        flex-direction: row;
+    }
+}
+@media screen and (max-height:385px){
+    .teamS section{
+        flex-direction: row;
+    }
+    .points{
+        width: 350px;
+    }
+}
+@media screen and (max-height:345px){
+    .points{
+        width: 0;
+        visibility: hidden;
+        height: 0;
+    }
+    .answer{
+        display: flex;
+        align-items: center;
+    }
+    .answer figcaption{
+        margin-left: 10px;
+    }
+}

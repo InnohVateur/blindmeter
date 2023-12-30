@@ -1,0 +1,78 @@
+body{
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 20px);
+    height: 100vh;
+    margin: 0;
+    font-family: arial;
+    user-select: none;
+}
+header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+.body{
+    height: calc(100vh - 100px);
+    overflow: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+audio{
+    width: 350px;
+    margin-top: 35px;
+}
+figure{
+    max-width: 350px;
+    display: flex;
+    text-align: center;
+}
+figcaption{
+    font-size: 16pt;
+}
+.verifbuttons{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    margin-top: 25px;
+}
+.verifbuttons input[type="submit"]{
+    padding: 20px;
+    border: none;
+    border-radius: 6.25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16pt;
+}
+.formverif input[type="submit"]{
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+    padding: 20px 50px 20px 50px;
+    margin: 0 20px 0 20px;
+}
+.formdecr input[type="submit"], .formincr input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+}
+.verifbuttons input[disabled="disabled"]{
+    color: black;
+    background-color: lightgrey;
+    cursor: auto;
+}
+.queryform input[type="text"]{
+    height: 65px;
+    width: 1000px;
+    border-radius: 50px;
+    font-size: 20pt;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.songid{
+    user-select: all;
+}
