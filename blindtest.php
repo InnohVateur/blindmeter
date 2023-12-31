@@ -1,13 +1,12 @@
 <?php
     if(session_status()==PHP_SESSION_NONE)session_start(); #Starts the session if not started
-
     $env = parse_ini_file('.env'); #Converts the .env config file to an array
-    $access_mdp = $env['ACCESS_PASSWD']; #THE MDP REQUIRED TO ACCESS THE APP
+    $access_psswd = $env['ACCESS_PASSWD']; #THE PSSWD REQUIRED TO ACCESS THE APP
 
     $previous_length = $env['PREVIOUS_LENGTH']; #The number of previous songs that are tracked
     
     #INFORMATIONS FOR THE MYSQL SERVER CONNECTION
-    $dbms_mdp = $env['DBMS_PASSWD'];
+    $dbms_psswd = $env['DBMS_PASSWD'];
     $dbms_user = $env['DBMS_USER'];
     $dbms_host = $env['DBMS_HOST'];
 
@@ -22,7 +21,7 @@
     if(!isset($_SESSION['gP'])) $_SESSION['gP'] = 0;
     if(!isset($_SESSION['bP'])) $_SESSION['bP'] = 0;
 
-    if(isset($_POST['mdp']) and $_POST['mdp'] == $access_mdp){ #If the password entered is right
+    if(isset($_POST['psswd']) and $_POST['psswd'] == $access_psswd){ #If the password entered is right
         $_SESSION['isConnected'] = true; #Then let the user access
     }
     if(isset($_POST['reset'])){ #If the reset button has been pressed
@@ -56,9 +55,9 @@
         }
     }
     function getRandomSong(){ #Gets a random song that has not been chosen in the last $previous_length songs
-        global $dbms_host, $dbms_user, $dbms_mdp, $db_name, $table_name, $previous_length; #Gets the value of the global variables
+        global $dbms_host, $dbms_user, $dbms_psswd, $db_name, $table_name, $previous_length; #Gets the value of the global variables
 
-        $conn = new mysqli($dbms_host, $dbms_user, $dbms_mdp); #Connects to the MySQL server
+        $conn = new mysqli($dbms_host, $dbms_user, $dbms_psswd); #Connects to the MySQL server
         if($conn->connect_error){ #If there is a connection error
             die("Connection failed : ". $conn->connect_error); #Then print the error on the page
         }

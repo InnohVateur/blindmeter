@@ -2,10 +2,10 @@
     if(session_status()==PHP_SESSION_NONE)session_start(); #Starts the session if not started
 
     $env = parse_ini_file('.env'); #Converts the .env config file to an array
-    $access_mdp = $env['ACCESS_PASSWD']; #THE MDP REQUIRED TO ACCESS THE APP
+    $access_psswd = $env['ACCESS_PASSWD']; #THE PSSWD REQUIRED TO ACCESS THE APP
     
     #INFORMATIONS FOR THE MYSQL SERVER CONNECTION
-    $dbms_mdp = $env['DBMS_PASSWD'];
+    $dbms_psswd = $env['DBMS_PASSWD'];
     $dbms_user = $env['DBMS_USER'];
     $dbms_host = $env['DBMS_HOST'];
 
@@ -20,7 +20,7 @@
     if(!isset($_SESSION['hasPrev'])) $_SESSION['hasPrev'] = false;
     if(!isset($_SESSION['hasNext'])) $_SESSION['hasNext'] = false;
 
-    if(isset($_POST['mdp']) and $_POST['mdp'] == $access_mdp){ #If the password entered is right
+    if(isset($_POST['psswd']) and $_POST['psswd'] == $access_psswd){ #If the password entered is right
         $_SESSION['isConnected'] = true; #Then let the user access
     }
     function querySong(string $q, int $r_number, int $index){ #get a song with a query and an offset
@@ -89,7 +89,7 @@
 <?php
     if(isset($_POST['verif'])){ #If the user entered a button
         #Connects to the MySQL server
-        $connection = new mysqli($dbms_host, $dbms_user, $dbms_mdp);
+        $connection = new mysqli($dbms_host, $dbms_user, $dbms_psswd);
 
         if($connection->connect_error){ #If there is a connection error
             die("Connection failed : " . $connection->connect_error); #Then display it on the page
@@ -136,7 +136,7 @@
     }
 
     if(isset($_POST['resetdbsongs']) and $_POST['resetdbsongs'] == "TRUE"){ #If the user hit the button to reload the whole database
-        $conn = new mysqli($dbms_host, $dbms_user, $dbms_mdp); #Connects to the MySQL server
+        $conn = new mysqli($dbms_host, $dbms_user, $dbms_psswd); #Connects to the MySQL server
         if($conn->connect_error){ #If there is a connection error
             die('Connection failed : '. $conn->connect_error); #Then display the error on the page
         }
