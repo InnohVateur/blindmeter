@@ -88,6 +88,7 @@
         <title>BlindMeter - Blind Test</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="stylesheet" href="style/blindtest.css">
+        <link rel="shortcut icon" href="rsc/favicon.png" type="image/png">
         <?php
             if($_SESSION['isConnected']){ #If the user can access the page
                 if(!isset($_POST['pointchange'])){ #If the player hasn't hit a button

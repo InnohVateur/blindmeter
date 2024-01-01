@@ -185,6 +185,7 @@
         <title>BlindMeter - Add a music to the Blind Test Database</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="stylesheet" href="style/addbtmusic.css">
+        <link rel="shortcut icon" href="rsc/favicon.png" type="image/png">
     </head>
     <body>
         <?php
