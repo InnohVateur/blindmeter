@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `songs` (
   PRIMARY KEY (`deez_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COMMENT='Table for blind test songs';
 
-<
+
 INSERT INTO `songs` (`deez_id`, `title`, `preview`, `picture`, `artists`) VALUES
 (364951, 'Daddy Cool', 'http://cdn-preview-a.deezer.com/stream/c-a011354ca9b5c88f3916ff6b1fa4b01c-6.mp3', 'http://e-cdn-images.dzcdn.net/images/cover/c2ecc5f062629f42115e28f9a2b6ccd0/1000x1000-000000-80-0-0.jpg', 'Boney M.'),
 (532007, 'Fantasy', 'http://cdn-preview-8.deezer.com/stream/c-8317bdb49d59bc1d1b97862a10d76eb8-6.mp3', 'http://e-cdn-images.dzcdn.net/images/cover/5336b7dbdf01f764ecad77f057e09c98/1000x1000-000000-80-0-0.jpg', 'Earth, Wind & Fire'),
@@ -1228,6 +1228,7 @@ INSERT INTO `songs` (`deez_id`, `title`, `preview`, `picture`, `artists`) VALUES
 (1697736667, 'Strange Game', 'http://cdn-preview-5.deezer.com/stream/c-511d28e19ab27d8eca10feb5f383f16b-6.mp3', 'http://e-cdn-images.dzcdn.net/images/cover/439b9e3377c83988e4bf0953a39506ed/1000x1000-000000-80-0-0.jpg', 'Mick Jagger');
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET character_set_client = 'utf8' */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
